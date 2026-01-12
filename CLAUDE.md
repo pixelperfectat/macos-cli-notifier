@@ -75,8 +75,6 @@ swift scripts/generate-icons.swift
 
 Icons are stored in `macos-notifier/Assets.xcassets/AppIcon.appiconset/`. The icon features a dark rounded rectangle with white terminal prompt (`>_`) and orange notification dot.
 
-Note: macOS app icons don't support dark mode variants in asset catalogs - the icon design works well in both light and dark system appearances.
-
 ## Git Workflow
 
 When committing changes, use the `/commit` skill instead of running git commands directly.
