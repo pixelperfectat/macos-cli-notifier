@@ -68,12 +68,14 @@ For notifications to remain visible until clicked, the user must set the notific
 ## Icon Generation
 
 ```bash
-# Regenerate terminal-style icons (light/dark variants)
+# Regenerate terminal-style icons
 # Run from project root directory
 swift scripts/generate-icons.swift
 ```
 
-Icons are stored in `macos-notifier/Assets.xcassets/AppIcon.appiconset/` with `Contents.json` configured for theme-aware switching via `luminosity` appearance. The icon features a dark rounded rectangle with white terminal prompt (`>_`) and orange notification dot.
+Icons are stored in `macos-notifier/Assets.xcassets/AppIcon.appiconset/`. The icon features a dark rounded rectangle with white terminal prompt (`>_`) and orange notification dot.
+
+Note: macOS app icons don't support dark mode variants in asset catalogs - the icon design works well in both light and dark system appearances.
 
 ## Git Workflow
 

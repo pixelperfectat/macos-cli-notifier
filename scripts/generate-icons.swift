@@ -169,18 +169,11 @@ let iconsetPath = "\(projectDir)/macos-notifier/Assets.xcassets/AppIcon.appicons
 
 print("Generating terminal-style icons in: \(iconsetPath)")
 
-// Generate light mode icons (dark background)
+// Generate icons (dark background with terminal prompt style)
+// Note: macOS app icons don't support dark mode variants in asset catalogs
 for (name, size) in sizes {
     if let pngData = createIcon(pixelSize: size, darkMode: false) {
         let filename = "icon_\(name).png"
-        savePNG(pngData, to: "\(iconsetPath)/\(filename)")
-    }
-}
-
-// Generate dark mode icons (slightly lighter background)
-for (name, size) in sizes {
-    if let pngData = createIcon(pixelSize: size, darkMode: true) {
-        let filename = "icon_\(name)_dark.png"
         savePNG(pngData, to: "\(iconsetPath)/\(filename)")
     }
 }
