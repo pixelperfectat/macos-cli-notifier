@@ -163,10 +163,8 @@ func savePNG(_ data: Data, to path: String) {
     }
 }
 
-// Get script directory
-let scriptPath = CommandLine.arguments[0]
-let scriptDir = (scriptPath as NSString).deletingLastPathComponent
-let projectDir = (scriptDir as NSString).deletingLastPathComponent
+// Get project directory (script should be run from project root)
+let projectDir = FileManager.default.currentDirectoryPath
 let iconsetPath = "\(projectDir)/macos-notifier/Assets.xcassets/AppIcon.appiconset"
 
 print("Generating terminal-style icons in: \(iconsetPath)")
